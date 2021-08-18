@@ -1,0 +1,13 @@
+Hi good day Joseph some  {{ name }} Just contacted you from hngi8 resume app view the details below:
+
+    Full Name : {{ name }}
+    
+    Email Address: {{ email }}
+    
+    Tel No : {{ phone }}
+    
+    Company Name: {{ company }}
+    
+    Message : {{ message }}
+
+            Contact was made on {{ date }}

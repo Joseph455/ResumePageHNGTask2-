@@ -1,0 +1,4 @@
+HngTask1/.env
+venv
+db.sqlite3
+.vscode
