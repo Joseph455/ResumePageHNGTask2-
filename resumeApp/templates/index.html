@@ -15,8 +15,9 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'resumeApp/css/styles.css' %}" rel="stylesheet" />
+
     </head>
-    <body id="page-top">
+    <body id="page-top" class="bg-bubble">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -30,6 +31,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contacts">Contacts</li>
                 </ul>
@@ -107,7 +109,7 @@
                     
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0"><a class="text-black text-decoration-none" href="https://ui.edu.ng"  target="_blank">University of Ibadan</a></h3>
+                            <h3 class="mb-0"><a class="text-black text-decoration-none" href="https://ui.edu.ng/"  target="_blank">University of Ibadan</a></h3>
                             <div class="subheading mb-3">Bachelor of Science</div>
                             <div>Computer Science</div>
                             <p>CGPA: 3.02</p>
@@ -116,7 +118,6 @@
                     </div>
 
                     <hr class="mb-5" />
-                    
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0"><a class="text-black text-decoration-none" href="https://latointlschools.business.site/" target="_blank">Lato High School</a></h3>
@@ -134,26 +135,33 @@
                     <h2 class="mb-5">Skills</h2>
                     <div class="subheading mb-3">Programming Languages & Tools</div>
                     <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-bootstrap"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
-                        <li class="list-inline-item"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABz0lEQVRoge3YP2sUQRjH8Y9nFFOcFoIRjxRGLCysLEKCVmIpAW0klY2NpLC09D0INunEwjYvQgVBsBSVSCAICgH/IBoIp8WccEhmb27v1tnAfGGaYXaf3/f2dp7dpVAoFHJyqMFz/06smbpuXzrJcVpKEchNEcjNTO4AJtwJD/wVKAK5qXsPdHAV13EJ53Acs9jB2zHONVEnrsMNfBgUrjP+JXXdxHSwPkHw7AKPphA+m8AV9A+ywPOKQu+xhmWcx0WstEmgJ/7rv0Q3clxrBG5XFFmuOO6/CKQ0svnI/A5epBZqihSBucj8toa2u3FIEYh16ybfp5NJEfgame9pgUSKwLvI/EksTjFLY1wQ3yme4VjkuNZso/C6otAroXGdGqw9KjS0VgncrCg0PHaxN2JNFgF4nCgxamQTOIKHUxaYiazZa0LgLyvC/34aAmciaz6nhqnzSrkxGIu4hiUsCB37hPDg9x0/8Auf8BGbgvgwS5EayQK52bD/FXiaM1Qql8Uf0+9mzJXEaWyJ38C9fNFGcxZvxG/yJ/miVXMYd/BFPPw34RtTK7kvdOpY+D5uZUuXyBweCG9zw+F/YjVjrrHp4p7wCXJd6COFQqEGfwALB2NOjVeypgAAAABJRU5ErkJggg=="/></li>
-                        <li class="list-inline-item"><img src="data:image/png;base64,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"/></li>
-                    </ul>
-                    
-                    <div class="mb-3 text-sm text-right">Icons</div>
-                    <ul class="fa-ul mb-0 ">
-                        <li>
-                            <a href="https://icons8.com/icon/qULYrKvr-AFH/django"><small>django icon by Icons8</small></a>
-                        </li>
-                        <li>
-                            <a href="https://icons8.com/icon/25010/postgresql"><small class="">PostgreSQL icon by Icons8</small></a>
-                        </li>
-                    </ul>
+                      {% for skill in skills %}
+                        <a class="list-inline-item" type="button" data-toggle="tooltip" data-placement="bottom" title="{{ skill.title }}" role="button">
+                          <img class="icon" title="{{ skill.title }}" {% if skill.icon_url %} src="{{ skill.icon_url }}" {% else %} src="{{ skill.icon.url }}" {% endif %} />
+                        </a>
+                      {% endfor %}
+                      </ul>
                 </div>
+            </section>
 
+            <hr class="m-0" />
+            <!-- Projects-->
+            <section class="resume-section" id="projects">
+                <div class="resume-section-content" >
+                    <h2 class="mb-5">Projects</h2>
+                    <div class="d-flex container-fluid mx-1" style="overflow-x: scroll;">
+                      {% for project in projects %}
+                        <div class="card border rounded col-md-4 col-12 mx-1 shadow modal-toggel" role="button" type="button" data-toggle="modal" data-target="#{{ project.id }}-Modal">
+                          <img src="{{ project.image.url }}"  class="card-img-top" alt="..." >
+                          <div class="card-body">
+                            <h5 class="card-title">{{ project.title }}</h5>
+                            <p class="card-text">{{ project.description|truncatechars:50 }}.</p>
+                            <p class="card-text"><small class="text-muted">click for full view</small></p>
+                          </div>
+                        </div>
+                      {% endfor %}
+                    </div>
+                </div>
             </section>
             <hr class="m-0" />
             <!-- Interests-->
@@ -236,7 +244,40 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit Form</button>
               </form>
-            </section>      
+            </section>
+            <footer class="fixed-bottom container-fluid bg-dark d-flex justify-content-between h-auto">
+              <a href="https://icons8.com/icon/20909/html-5">Html 5 icon by Icons8</a>
+              <a href="https://icons8.com/icon/39854/javascript">JavaScript icon by Icons8</a>
+              <a href="https://icons8.com/icon/84710/bootstrap">Bootstrap icon by Icons8</a>
+              <a href="https://icons8.com/icon/13441/python">Python icon by Icons8</a>
+              <a href="https://icons8.com/icon/AksudKrBQryM/django">Django icon by Icons8</a>
+              <a href="https://icons8.com/icon/21893/rest-api">Rest API icon by Icons8</a>
+            </footer>
+
+            {% for project in projects %}
+              <div class="modal fade" style="max-height: 100vh;" tabindex="-1" role="dialog" id="{{ project.id }}-Modal" aria-labelledby="{{ project.id }}Modal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">{{ project.title }}</h5>
+                      <button type="button" class="close btn close btn-close" data-dismiss="#{{ project.id }}-Modal" aria-label="Close" >
+                      </button>
+                    </div>
+                    <div class="modal-body p-2 overflow-scroll">
+                      <img src="{{ project.image.url }}" class="border rounded w-100 h-75" />
+                      <p class="text-muted">{{ project.description }}</p>
+                      <div class="d-flex flex-column">
+                        <small class="">Demo <a href="{{ project.demo_url }}" target="_blank">{{ project.demo_url }}</a></small>
+                        <small class="">Source Code <a href="{{ project.source_url }}" target="_blank">{{ project.source_url }}</a></small>
+                      </div>
+                    </div>
+                    <div class="modal-footer p-0 flex-column">
+                      <button type="button" class="btn btn-secondary close " data-dismiss="#{{ project.id }}-Modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -269,7 +310,8 @@
           });
         }, false);
       
-      })();  
+      })();
+
       function getFormData(){
         let body = {};
         body.name = document.getElementById("inputName").value;
@@ -337,6 +379,21 @@
           }
         };
       }
+
+      document.querySelectorAll(".modal-toggel").forEach(modal => {
+        modal.addEventListener('click', (event)=> {
+          let target = modal.dataset['target']; 
+          $(target).modal('show')
+        });
+      });
+
+      document.querySelectorAll('.close').forEach(btn => {
+        btn.addEventListener('click', (event) => {
+          let target = btn.dataset['dismiss'];
+          $(target).modal('hide');
+        })
+      })
+
       </script>
     </body>
 </html>
