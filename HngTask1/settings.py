@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'resumeApp.apps.ResumeappConfig',
-    'rest_framework',
 ]
 
 MIDDLEWARE = [
