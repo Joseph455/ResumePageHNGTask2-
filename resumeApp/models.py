@@ -8,7 +8,8 @@ class Project(models.Model):
     description = models.CharField(max_length=1000, null=False, blank=False)
     source_url = models.URLField(max_length=500, null=False, blank=False)
     demo_url = models.URLField(max_length=500, null=False, blank=False)
-    image = models.ImageField(upload_to="images/", null=False)
+    image = models.ImageField(upload_to="images/", null=True, blank=True)
+    image_url = models.URLField(max_length=1000, null=True, blank=True)
 
     def __str__(self) -> str:
         return self.title
